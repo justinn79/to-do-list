@@ -1,0 +1,63 @@
+.App {
+    display: flex;
+    width : 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.Sidebar{
+    width: 350px;
+}
+
+.AppTitle{
+    font-size: 24px;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    border: 1px solid black
+}
+
+.AddTodo{
+    border-bottom: 1px solid black;
+}
+
+.AddTodo .btn{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    height: 50px;
+}
+
+.AddTodo .btn button{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    color: white;
+    background-color: navy;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.AddTodo .btn button:hover{
+    filter:brightness(1.1);
+    background-color: lightskyblue;
+    transition: all 300ms ease;
+}
+
+
+.Modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.Modal .container{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    /* transform: translate(-50%, -25%); */
+    background-color: white;
+}
