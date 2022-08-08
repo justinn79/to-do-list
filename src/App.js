@@ -2,10 +2,11 @@ import './App.css';
 import Main from './components/Main'
 import Sidebar from './components/Sidebar'
 import AddTodo from './components/side-components/Addtodo'
-import AddFolderOfTodo from './components/side-components/AddFolderOfTodo';
+import TodoFolders from './components/side-components/TodoFolders';
 import ListOfTodo from './components/main-components/ListOfTodo';
 import EditTodo from './components/main-components/EditTodo';
 import AppTitle from './components/side-components/AppTitle';
+import TodoCalendar from './components/side-components/TodoCalendar';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Sidebar>
           <AppTitle />
           <AddTodo />
-          <AddFolderOfTodo />
+          <TodoCalendar />
+          <TodoFolders />
         </Sidebar>
 
         <Main>

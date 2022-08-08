@@ -120,3 +120,108 @@
     border: none;
     border-radius: 5px;
 }
+
+/* To-do Calendar from TodoCalendar.js */
+
+.TodoCalendar{
+    padding:  1rem;
+    border-bottom: 1px solid black;
+}
+
+.TodoCalendar .title{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.TodoCalendar .items{
+    padding: 0.3rem;
+}
+
+.TodoCalendar .items .item{
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 30%;
+}
+
+.TodoCalendar .items .item:hover{
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/* To-do Folders from TodoFolders.js */
+
+.TodoFolders{
+    padding:  1rem;
+    border-bottom: 1px solid black;
+}
+
+.TodoFolders .header{
+    display: flex;
+    align-items: center;
+}
+
+.TodoFolders .header .title{
+    font-size: 1.3rem;
+    font-weight: bold;
+    flex: 1;
+}
+
+.TodoFolders .header .btns{
+    cursor: pointer;
+    display: flex;
+}
+
+.TodoFolders .header .btns .delete{
+    border-radius: 14px;
+    height: 25px;
+    transition: 0.3s;
+}
+
+.TodoFolders .header .btns .delete:hover{
+    background-color: black;
+    color: white;
+}
+
+.TodoFolders .items{
+    padding: 0.3rem;
+}
+
+.Folder{
+    padding:  0.3rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.Folder .name{
+    cursor: pointer;
+    flex: 1;
+}
+
+.Folder .btns{
+    display: flex;
+    align-items: center;
+}
+
+.Folder .btns .delete{
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.3s;
+    border-radius: 8px;
+    width: 15px;
+    height: 15px;
+}
+
+.Folder .btns .delete:hover{
+    background-color: red;
+}
+
+.Folder .btns .numoftodos{
+    background-color: grey;
+    width: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
