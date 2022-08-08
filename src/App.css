@@ -9,6 +9,7 @@
     width: 350px;
 }
 
+/* AppTitle.js */
 .AppTitle{
     font-size: 24px;
     display: flex;
@@ -17,6 +18,7 @@
     border: 1px solid black
 }
 
+/* Addtodo.js */
 .AddTodo{
     border-bottom: 1px solid black;
 }
@@ -44,7 +46,7 @@
     transition: all 300ms ease;
 }
 
-
+/* The modal in Apptodo.js*/
 .Modal{
     position: fixed;
     top: 0;
@@ -60,4 +62,61 @@
     left: 50%;
     /* transform: translate(-50%, -25%); */
     background-color: white;
+    border-radius: 20px;
+}
+
+/* The form in the Modal of the file Addtodo.js */
+.AddTodo form{
+    padding: 1rem;
+    width: 550px;
+}
+
+.AddTodo form .text input{
+    padding: 1rem;
+    width: 90%;
+    font-size: 1rem;
+}
+
+.AddTodo form .text input:focus {
+    
+}
+
+.AddTodo form p{
+    margin-left: 5px;
+}
+
+.AddTodo form .title{
+    margin-bottom: 5px;
+}
+
+.AddTodo form .pick-day{
+    padding: 1rem 1rem 0 1rem;
+}
+
+.AddTodo form .pick-time{
+    padding: 1rem 1rem 3rem 1rem;
+}
+
+.AddTodo form .cancel{
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
+
+.AddTodo form .confirm{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.AddTodo form .confirm button{
+    width: 100%;
+    height: 35px;
+    background-color: navy;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
 }
