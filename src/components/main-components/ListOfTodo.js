@@ -22,7 +22,7 @@ function ListOfTodo(){
             date: '08/14/2022',
             time: '8:00 PM',
             day: '3',
-            checked: false,
+            checked: true,
             folder: 'fun things'
         },
 

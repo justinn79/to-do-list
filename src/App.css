@@ -289,3 +289,33 @@
     overflow-y: auto; /*Gives scrolls bars when the list goes on and on after exceeding the space limit */
 }
 
+/* Todo.js (Styling the text of the list of todos) */
+.Todo{
+    padding: 0.3rem;
+}
+
+.Todo .todoContainer{
+    display: flex;
+    align-items: center;
+}
+
+.Todo .todoContainer span{
+    cursor: pointer;
+}
+
+.Todo .todoContainer .text{
+    margin-bottom: 5px;
+    font-size: 1rem;
+    flex: 1;
+    margin-left: 10px;
+}
+
+.Todo .todoContainer .text .todo-text{
+    margin-bottom: 2px;
+}
+
+.Todo .todoContainer .text .time-and-folder{
+    font-size: 0.8rem;
+    color: grey;
+}
+
