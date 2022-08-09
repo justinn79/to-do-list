@@ -265,3 +265,27 @@
     background-color: navy;
     color: white;
 }
+
+/* The list of Todos on the main component from the file ListOfTodos.js */
+
+.ListOfTodo{
+    background-color: beige;
+    width: 25vw;
+    height: 50vh;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+}
+
+.ListOfTodo .selected-Folder{
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.ListOfTodo .todos{
+    overflow-y: auto; /*Gives scrolls bars when the list goes on and on after exceeding the space limit */
+}
+
