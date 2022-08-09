@@ -10,7 +10,7 @@ function Folder({folder}){
                 {folder.name}
             </div>
 
-            <div className="btns">
+            <div className="todoCount">
                 {
                     folder.numOfTodos === 0 ? ""
                     
@@ -20,6 +20,9 @@ function Folder({folder}){
                         {folder.numOfTodos}
                     </div>
                 }
+            </div>
+
+            <div className="btns">
 
                     <div className="delete">
                     <span>

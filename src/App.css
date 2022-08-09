@@ -54,12 +54,13 @@
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.8);
+    cursor: default;
 }
 
 .Modal .container{
     position: absolute;
     top: 25%;
-    left: 50%;
+    left: 40%;
     /* transform: translate(-50%, -25%); */
     background-color: white;
     border-radius: 20px;
@@ -169,20 +170,20 @@
 }
 
 .TodoFolders .header .btns{
-    cursor: pointer;
     display: flex;
+    cursor: pointer;
 }
 
-.TodoFolders .header .btns .delete{
+.TodoFolders .header .btns .addFolderButton{
     border-radius: 14px;
     height: 25px;
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 
-.TodoFolders .header .btns .delete:hover{
+/* .TodoFolders .header .btns .addFolderButton:hover{
     background-color: black;
     color: white;
-}
+} */
 
 .TodoFolders .items{
     padding: 0.3rem;
@@ -218,10 +219,49 @@
     background-color: red;
 }
 
-.Folder .btns .numoftodos{
+.Folder .todoCount .numoftodos{
     background-color: grey;
     width: 20px;
     text-align: center;
     border-radius: 10px;
+    color: white;
+}
+
+/* Add new Folder component in FolderForm.js */
+
+.FolderForm{
+    padding: 1rem;
+    border-radius: 6px;
+    position: relative;
+    width: 400px;
+    padding-bottom: 30px;
+    margin-right: 15px
+}
+
+.FolderForm input{
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 15px;
+}
+
+.FolderForm button{
+    position: absolute;
+    bottom: 5px;
+    height: 30px;
+    width: 30%;
+    border-radius: 6px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.FolderForm button.cancel{
+    left: 10;
+    background-color: grey;
+    color: white;
+}
+
+.FolderForm button.confirm{
+    right: 0;
+    background-color: navy;
     color: white;
 }

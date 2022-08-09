@@ -20,7 +20,7 @@ function TodoFolders(){
                 </div>
 
                 <div className="btns">
-                    <span className="delete">
+                    <span className="addFolderButton">
                         <AddNewFolder />
                     </span>
                 </div>
