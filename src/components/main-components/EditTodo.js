@@ -1,10 +1,73 @@
-import React from 'react'
+import React, {useState} from 'react'
+// import Modal from '../Modal'
+import Addtodo from '../side-components/Addtodo'
+import TodoFolders from '../side-components/TodoFolders'
+
+import { X } from 'react-bootstrap-icons'
+import { DatePicker, TimePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
+
 
 function EditTodo(){
 
+    const [showModal, setShowModal] = useState()
+
+    const [day, setDay] = useState()
+    const [time, setTime] = useState()
+    const [text, setText] = useState('')
+
     return(
         <div className="EditTodo">
-            <h2>EditTodo here</h2>
+            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                <form>
+                    <div className="text">
+                        <h3>Edit a To-do Task</h3>
+                        <input
+                            type="text"
+                            value={text}
+                            placeholder='Edit your task here'
+                            onChange={e => setText(e.target.value)}
+                            autoFocus
+                        />
+                    </div>
+
+                    <div className="pick-day">
+                        <div className="title">
+                            <p>Choose a day</p>
+                        </div>
+                        {
+                            showModal ?
+                            ""
+                            :
+                            <DatePicker 
+                            value={day}
+                            onChange={day => setDay(day)}
+                            />
+                        }
+                    </div>
+
+                    <div className="pick-time">
+                        <div className="title">
+                            <p>Choose a time</p>
+                        </div>
+                        <div className="timePicker">
+                            <TimePicker 
+                                value={time}
+                                onChange={time => setTime(time)}    
+                            />
+                        </div>
+                    </div>
+
+                    {/* <div className="cancel">
+                        <X size='35'/>
+                    </div>
+
+                    <div className="confirm">
+                        <button>Add New Todo!</button>
+                    </div> */}
+                
+                </form>
+            </MuiPickersUtilsProvider>
         </div>
     )
 }

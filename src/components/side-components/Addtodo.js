@@ -19,6 +19,7 @@ function AddTodo(){
             <div className="btn">
                 <button onClick={() => setShowModal(true)}>
                     Add New Todo
+                    {/* {console.log(showModal)} */}
                 </button>
             </div>
             <Modal showModal={showModal} setShowModal={setShowModal}>
