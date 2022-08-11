@@ -56,6 +56,21 @@ function AddTodo(){
                             />
                         </div>
 
+                        {/* <div className="folders">
+                            {
+                                folders.map( folder => 
+                                    <div
+                                        className="folder"
+                                        key={folder.id}
+                                    >
+                                        {folder.name}
+                                    </div>
+                                
+                                )
+                            }
+                            
+                        </div> */}
+
                         <div className="cancel" onClick={() => setShowModal(false)}>
                             <X size='35'/>
                         </div>
