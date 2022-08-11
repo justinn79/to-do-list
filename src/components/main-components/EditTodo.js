@@ -1,16 +1,11 @@
 import React, {useState} from 'react'
-// import Modal from '../Modal'
-import Addtodo from '../side-components/Addtodo'
-import TodoFolders from '../side-components/TodoFolders'
 
-import { X } from 'react-bootstrap-icons'
+// import { X } from 'react-bootstrap-icons'
 import { DatePicker, TimePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 
 
 function EditTodo(){
-
-    const [showModal, setShowModal] = useState()
 
     const [day, setDay] = useState()
     const [time, setTime] = useState()
@@ -35,27 +30,20 @@ function EditTodo(){
                         <div className="title">
                             <p>Choose a day</p>
                         </div>
-                        {
-                            showModal ?
-                            ""
-                            :
-                            <DatePicker 
-                            value={day}
-                            onChange={day => setDay(day)}
-                            />
-                        }
+                        <DatePicker 
+                        value={day}
+                        onChange={day => setDay(day)}
+                        />
                     </div>
 
                     <div className="pick-time">
                         <div className="title">
                             <p>Choose a time</p>
                         </div>
-                        <div className="timePicker">
-                            <TimePicker 
-                                value={time}
-                                onChange={time => setTime(time)}    
-                            />
-                        </div>
+                        <TimePicker 
+                            value={time}
+                            onChange={time => setTime(time)} 
+                        />
                     </div>
 
                     {/* <div className="cancel">

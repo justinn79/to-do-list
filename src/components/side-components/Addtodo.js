@@ -52,7 +52,7 @@ function AddTodo(){
                             </div>
                             <TimePicker 
                                 value={time}
-                                onChange={time => setTime(time)}    
+                                onChange={time => setTime(time)} 
                             />
                         </div>
 

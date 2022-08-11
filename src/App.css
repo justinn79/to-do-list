@@ -63,6 +63,7 @@
     height: 100vh;
     background: rgba(0, 0, 0, 0.8);
     cursor: default;
+    z-index: 1;
 }
 
 .Modal .container{
@@ -345,8 +346,4 @@
     box-sizing: border-box;
     font-size: 0.8rem;
 }
-
-/* .EditTodo .pick-time .timePicker{
-
-} */
 
