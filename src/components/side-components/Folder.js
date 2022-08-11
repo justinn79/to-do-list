@@ -1,12 +1,19 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { XCircle } from 'react-bootstrap-icons'
 
+import { TodoContext } from '../context'
+
 function Folder({folder}){
+
+    const { setSelectedFolder } = useContext(TodoContext)
     
     return(
         <div className="Folder">
 
-            <div className="name">
+            <div 
+                className="name"
+                onClick={ () => setSelectedFolder(folder.name)}
+            >
                 {folder.name}
             </div>
 

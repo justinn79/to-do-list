@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
+
+import { TodoContext } from '../context'
 
 function TodoCalendar(){
     
     const todoCalendaritems = ['Today', 'Next 7 days', 'All days']
+
+    const { setSelectedFolder } = useContext(TodoContext)
 
     return(
         <div className="TodoCalendar">
@@ -13,7 +17,11 @@ function TodoCalendar(){
             <div className="items">
                 {
                     todoCalendaritems.map( item => 
-                        <div className="item" key={item}>
+                        <div 
+                            className="item" 
+                            key={item}
+                            onClick={ () => setSelectedFolder(item)}    
+                        >
                             { item }
                         </div>
                     )

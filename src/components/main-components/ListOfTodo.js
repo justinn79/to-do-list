@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Todo from './Todo'
+
+import { TodoContext } from '../context'
 
 function ListOfTodo(){
 
-    const selectedFolder ="work-related"
+    const { selectedFolder } = useContext(TodoContext)
 
     const todos = [
         {
