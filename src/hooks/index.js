@@ -20,7 +20,7 @@ export function useTodos(){
         })
 
         return () => unsubscribe()
-    })
+    }, [])
 
     return todos
 }
