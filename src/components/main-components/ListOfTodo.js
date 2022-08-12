@@ -1,43 +1,43 @@
 import React, { useContext } from 'react'
 import Todo from './Todo'
 
-import { TodoContext } from '../context'
+import { TodoContext } from '../../context'
 
 function ListOfTodo(){
 
-    const { selectedFolder } = useContext(TodoContext)
+    const { todos, selectedFolder } = useContext(TodoContext)
 
-    const todos = [
-        {
-            id: '1',
-            text: 'finish todo list project',
-            date: '08/17/2022',
-            time: '10:00 PM',
-            day: '6',
-            checked: false,
-            folder: 'work-related'
-        },
+    // const todos = [
+    //     {
+    //         id: '1',
+    //         text: 'finish todo list project',
+    //         date: '08/17/2022',
+    //         time: '10:00 PM',
+    //         day: '6',
+    //         checked: false,
+    //         folder: 'work-related'
+    //     },
 
-        {
-            id: '2',
-            text: 'watch programming videos',
-            date: '08/14/2022',
-            time: '8:00 PM',
-            day: '3',
-            checked: true,
-            folder: 'fun things'
-        },
+    //     {
+    //         id: '2',
+    //         text: 'watch programming videos',
+    //         date: '08/14/2022',
+    //         time: '8:00 PM',
+    //         day: '3',
+    //         checked: true,
+    //         folder: 'fun things'
+    //     },
 
-        {
-            id: '3',
-            text: 'do laundry',
-            date: '08/11/2022',
-            time: '11:00 AM',
-            day: '1',
-            checked: false,
-            folder: 'chores'
-        },
-    ]
+    //     {
+    //         id: '3',
+    //         text: 'do laundry',
+    //         date: '08/11/2022',
+    //         time: '11:00 AM',
+    //         day: '1',
+    //         checked: false,
+    //         folder: 'chores'
+    //     },
+    // ]
 
     return(
         <div className="ListOfTodo">

@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import { XCircle } from 'react-bootstrap-icons'
 
-import { TodoContext } from '../context'
+import { TodoContext } from '../../context'
 
 function Folder({folder}){
 

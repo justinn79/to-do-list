@@ -1,8 +1,8 @@
-import firebase from 'firebase/app'
-import 'firebase/firestore'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/firestore'
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+// import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -14,7 +14,7 @@ const firebaseConfig = {
   storageBucket: "todo-app-18820.appspot.com",
   messagingSenderId: "846545099579",
   appId: "1:846545099579:web:7d76325110f8604b24b51e"
-};
+}
 
 // Initialize Firebase
 // const app = initializeApp(firebaseConfig);
