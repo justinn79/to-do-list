@@ -347,3 +347,18 @@
     font-size: 0.8rem;
 }
 
+/*Next 7 Day Component*/
+.Next7Days .day{
+    margin: 5px;
+    display: flex;
+}
+
+.Next7Days .day .name{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.Next7Days .day .total-todos {
+    margin-left: 10px;
+    font-size: 0.9rem;
+}

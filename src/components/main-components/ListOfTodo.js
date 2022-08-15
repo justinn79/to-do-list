@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import Todo from './Todo'
+import Next7Days from '../side-components/Next7Days'
 
 import { TodoContext } from '../../context'
 
@@ -49,6 +50,9 @@ function ListOfTodo(){
 
             <div className="todos">
                 {
+                    selectedFolder === "Next 7 days" ?
+                    <Next7Days todos={todos} />
+                    :
                     todos.map( todo =>
                         <Todo todo={todo} key={todo.id} />)
                 }
