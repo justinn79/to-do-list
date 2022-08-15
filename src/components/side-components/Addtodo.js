@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import Modal from '../Modal'
+import firebase from '../../firebase'
+import moment from 'moment'
 
 import { X } from 'react-bootstrap-icons'
 import { DatePicker, TimePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
@@ -14,6 +16,30 @@ function AddTodo(){
 
     const [text, setText] = useState('')
 
+    function handleSubmit(e){
+        e.preventDefault()
+
+        if(text){
+            firebase
+                .firestore()
+                .collection('todos')
+                .add(
+                    {
+                        text : text,
+                        date : moment(day).format('MM/DD/YYYY'),
+                        day : moment(day).format('d'),
+                        time : moment(time).format('hh:mm A'),
+                        checked : false,
+
+                    }
+                )
+                setShowModal(false)
+                setText('')
+                setDay(new Date())
+                setTime(new Date())
+        }   
+    }
+
     return(
         <div className="AddTodo">
             <div className="btn">
@@ -24,7 +50,7 @@ function AddTodo(){
             </div>
             <Modal showModal={showModal} setShowModal={setShowModal}>
                 <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className="text">
                             <h3>Add a new To-do task!</h3>
                             <input

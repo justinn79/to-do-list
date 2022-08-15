@@ -5,9 +5,9 @@ import Folder from './Folder'
 function TodoFolders(){
 
     const folders = [
-        { id : 1, name: "work-related", numOfTodos : 0},
-        { id : 2, name: "fun things", numOfTodos : 1},
-        { id : 3, name: "chores", numOfTodos : 2},
+        // { id : 1, name: "work-related", numOfTodos : 0},
+        // { id : 2, name: "fun things", numOfTodos : 1},
+        // { id : 3, name: "chores", numOfTodos : 2},
 
     ]
 
