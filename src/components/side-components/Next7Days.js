@@ -10,13 +10,13 @@ function Next7Days({todos}){
 
         const sortedTodosByDay = days.map( day => {
             return {
-                todos : todos.filter ( todo => todo.day === day),
+                todos : todos.filter( todo => todo.day === day),
                 number : day
             }
         })
 
         const today = parseInt(moment().format('d'))
-        const arrangeDays = sortedTodosByDay.slice(today)
+        const arrangeDays = sortedTodosByDay.slice(today).concat(sortedTodosByDay.slice(0, today))
 
         setWeekTodos(arrangeDays)
 
@@ -30,7 +30,7 @@ function Next7Days({todos}){
                         <div className='day'>
                             <div className='name'>
                                 { moment(day.number, 'd').format('dddd') }
-                                { day.number === moment().format('d') && ' (today)'}
+                                { day.number === moment().format('d') && ' (Today)'}
                             </div>
                             <div className="total-todos">
                                 ({day.todos.length})

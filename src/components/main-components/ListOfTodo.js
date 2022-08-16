@@ -50,7 +50,7 @@ function ListOfTodo(){
 
             <div className="todos">
                 {
-                    selectedFolder === "Next 7 days" ?
+                    selectedFolder === "next 7 days" ?
                     <Next7Days todos={todos} />
                     :
                     todos.map( todo =>
