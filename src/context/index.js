@@ -1,5 +1,5 @@
 import React, { createContext, useState} from 'react'
-import {useTodos} from '../hooks'
+import {useFilterTodos, useTodos} from '../hooks'
 
 const TodoContext = createContext()
 
@@ -9,6 +9,7 @@ function TodoContextProvider({children}){
     const [selectedFolder, setSelectedFolder] =useState(defaultFolder)
 
     const todos = useTodos()
+    const filteredTodos = useFilterTodos(todos, selectedFolder)
 
     return(
         <TodoContext.Provider
@@ -17,7 +18,7 @@ function TodoContextProvider({children}){
                     selectedFolder,
                     setSelectedFolder,
 
-                    todos
+                    todos : filteredTodos
                 }
             }
         >  

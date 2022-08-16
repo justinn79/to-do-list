@@ -30,7 +30,7 @@ function Next7Days({todos}){
                         <div className='day'>
                             <div className='name'>
                                 { moment(day.number, 'd').format('dddd') }
-                                { day.number === moment().format('d') && ' (Today)'}
+                                { day.number === moment().format('d') && ' (today)'}
                             </div>
                             <div className="total-todos">
                                 ({day.todos.length})

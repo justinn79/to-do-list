@@ -4,7 +4,7 @@ import { TodoContext } from '../../context'
 
 function TodoCalendar(){
     
-    const todoCalendaritems = ['Today', 'Next 7 days', 'All days']
+    const todoCalendaritems = ['today', 'next 7 days', 'all days']
 
     const { setSelectedFolder } = useContext(TodoContext)
 
@@ -22,7 +22,7 @@ function TodoCalendar(){
                             key={item}
                             onClick={ () => setSelectedFolder(item)}    
                         >
-                            { item }
+                            { item.charAt(0).toUpperCase() + item.slice(1) }
                         </div>
                     )
                 }
