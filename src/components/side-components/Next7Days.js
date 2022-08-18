@@ -26,7 +26,7 @@ function Next7Days({todos}){
         <div className="Next7Days">
             {
                 weekTodos.map( day => 
-                    <div key={day.number}>
+                    <div key={day.number} className="next7DaysList">
                         <div className='day'>
                             <div className='name'>
                                 { moment(day.number, 'd').format('dddd') }

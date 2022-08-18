@@ -11,6 +11,8 @@ function TodoContextProvider({children}){
     const todos = useTodos()
     const filteredTodos = useFilterTodos(todos, selectedFolder)
 
+    const [selectedTodo, setSelectedTodo] = useState(undefined)
+
     return(
         <TodoContext.Provider
             value={
@@ -18,7 +20,10 @@ function TodoContextProvider({children}){
                     selectedFolder,
                     setSelectedFolder,
 
-                    todos : filteredTodos
+                    todos : filteredTodos,
+
+                    selectedTodo,
+                    setSelectedTodo
                 }
             }
         >  

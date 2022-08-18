@@ -5,7 +5,7 @@ function AppTitle(){
     return(
         <div className="AppTitle">
             <div className="Title">
-                <p>To-Do List Application</p>
+                <p>Today's date here</p>
             </div>
         </div>
     )

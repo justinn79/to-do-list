@@ -53,9 +53,11 @@ function ListOfTodo(){
                     selectedFolder === "next 7 days" ?
                     <Next7Days todos={todos} />
                     :
-                    todos.map( todo =>
-                        <Todo todo={todo} key={todo.id} />)
-                }
+                    todos.map( todo => 
+                        <div className="todoList">
+                        <Todo todo={todo} key={todo.id} />
+                        </div>
+                    )}
             </div>
 
 

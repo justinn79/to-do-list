@@ -16,7 +16,7 @@ function App() {
           <AppTitle />
           <AddTodo />
           <TodoCalendar />
-          <TodoFolders />
+          {/* <TodoFolders /> */}
         </Sidebar>
 
         <Main>

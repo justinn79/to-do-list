@@ -19,7 +19,7 @@
     display: flex;
     padding: 1rem;
     justify-content: center;
-    border: 1px solid black
+    border-bottom: 1px solid black
 }
 
 /* Addtodo.js */
@@ -279,12 +279,14 @@
 /* The list of Todos on the main component from the file ListOfTodos.js */
 
 .ListOfTodo{
-    background-color: beige;
+    background-color: #E1E1E1;
     width: 25vw;
-    height: 50vh;
+    height: 60vh;
     padding: 1rem;
     border-radius: 8px;
     margin: 2rem;
+    overflow-y: auto; /*Gives scrolls bars when the list goes on and on after exceeding the space limit */
+
 }
 
 .ListOfTodo .selected-Folder{
@@ -293,15 +295,27 @@
     font-weight: bold;
     padding-bottom: 10px;
     border-bottom: 1px solid black;
+    text-align: center;
 }
 
-.ListOfTodo .todos{
-    overflow-y: auto; /*Gives scrolls bars when the list goes on and on after exceeding the space limit */
+.ListOfTodo .todos {
+    height: auto;
+}
+
+.ListOfTodo .todos .todoList{
+    background-color: white;
+    margin: 10px;
+    padding: 5px;
+    height: auto;
+    border-radius: 8px;
+    word-wrap: break-word;
+    
 }
 
 /* Todo.js (Styling the text of the list of todos) */
 .Todo{
     padding: 0.3rem;
+
 }
 
 .Todo .todoContainer{
@@ -348,6 +362,15 @@
 }
 
 /*Next 7 Day Component*/
+
+.Next7Days .next7DaysList{
+    background-color: white;
+    margin: 10px;
+    padding: 5px;
+    height: auto;
+    border-radius: 8px;
+}
+
 .Next7Days .day{
     margin: 5px;
     display: flex;
@@ -362,3 +385,4 @@
     margin-left: 10px;
     font-size: 0.9rem;
 }
+
