@@ -65,7 +65,6 @@ function Todo({todo}){
 
                 <div 
                     className="text"
-                    onClick = { () => setSelectedTodo(todo)}
                 >
 
                     <p className="todo-text">
@@ -73,10 +72,19 @@ function Todo({todo}){
                     </p>
 
                     <span className="time-and-folder">
-                        {todo.time} - {todo.folder} 
+                        {todo.time} - {todo.date} 
                     </span>
 
 
+                </div>
+
+                <div className="edit-todo" onClick = { () => setSelectedTodo(todo)}>
+                    {
+                        (hover) &&
+                        <span>
+                            Edit
+                        </span>
+                    }
                 </div>
 
                 <div className="delete-todo" onClick={ () => deleteButton(todo) }>

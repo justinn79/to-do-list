@@ -115,21 +115,19 @@
 }
 
 .AddTodo form .confirm{
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
     width: 100%;
+
 }
 
 .AddTodo form .confirm button{
     width: 100%;
-    height: 35px;
+    height: 45px;
     background-color: navy;
     color: white;
     font-size: 1rem;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
 /* To-do Calendar from TodoCalendar.js */
@@ -137,6 +135,7 @@
 .TodoCalendar{
     padding:  1rem;
     border-bottom: 1px solid black;
+    text-align: center;
 }
 
 .TodoCalendar .title{
@@ -151,7 +150,6 @@
 .TodoCalendar .items .item{
     padding: 0.5rem;
     cursor: pointer;
-    width: 30%;
 }
 
 .TodoCalendar .items .item:hover{
@@ -343,9 +341,21 @@
     color: grey;
 }
 
+.Todo .todoContainer .edit-todo{
+    margin-right: 10px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.Todo .todoContainer .edit-todo:hover{
+    margin-right: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 /* EditTodo side bar on the main component from EditTodo.js*/
 
-.EditTodo{
+.EditTodo .EditTodoForm{
     background-color: beige;
     width: 25vw;
     height: 50vh;
@@ -384,5 +394,12 @@
 .Next7Days .day .total-todos {
     margin-left: 10px;
     font-size: 0.9rem;
+}
+
+.Next7Days .next7DaysList .day{
+    background-color: navy;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 8px;
 }
 

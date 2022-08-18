@@ -39,14 +39,14 @@ function EditTodo(){
                 })
 
         }
-    }, [text, day, time])
+    }, [day, time, text])
 
     return(
         <div className="EditTodo">
             {
                 selectedTodo &&
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                        <form>
+                        <form className="EditTodoForm">
                             <div className="text">
                                 <h3>Edit a To-do Task</h3>
                                 <input
