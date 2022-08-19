@@ -60,7 +60,7 @@ function EditTodo(){
 
                             <div className="pick-day">
                                 <div className="title">
-                                    <p>Choose a day</p>
+                                    <p>Select a day</p>
                                 </div>
                                 <DatePicker 
                                 value={day}
@@ -70,7 +70,7 @@ function EditTodo(){
 
                             <div className="pick-time">
                                 <div className="title">
-                                    <p>Choose a time</p>
+                                    <p>Select a time</p>
                                 </div>
                                 <TimePicker 
                                     value={time}

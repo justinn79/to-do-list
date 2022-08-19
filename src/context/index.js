@@ -5,7 +5,7 @@ const TodoContext = createContext()
 
 function TodoContextProvider({children}){
 
-    const defaultFolder = 'today'
+    const defaultFolder = 'next 7 days'
     const [selectedFolder, setSelectedFolder] =useState(defaultFolder)
 
     const todos = useTodos()

@@ -11,7 +11,7 @@ function TodoCalendar(){
     return(
         <div className="TodoCalendar">
             <div className="title">
-                <p>Your To-do Calendar</p>
+                <p>To-do Calendar</p>
             </div>
 
             <div className="items">
