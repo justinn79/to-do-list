@@ -56,7 +56,7 @@ function AddTodo(){
                             <input
                                 type="text"
                                 value={text}
-                                placeholder='Add new task here'
+                                placeholder='Name of task here...'
                                 onChange={e => setText(e.target.value)}
                                 autoFocus
                             />

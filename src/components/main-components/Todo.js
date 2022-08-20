@@ -72,7 +72,7 @@ function Todo({todo}){
                     </p>
 
                     <span className="time-and-folder">
-                        {todo.time} - {todo.date} 
+                        {todo.date} - {todo.time} 
                     </span>
 
 

@@ -5,15 +5,20 @@ body{
     font-family: 'Ubuntu', sans-serif;
 }
 .App {
+    position: absolute;
     display: flex;
     width : 100vw;
     height: 100vh;
     overflow: hidden;
+    top: 0;
+    left: 0;
 }
 
 .Sidebar{
-    width: 25%;
+    width: 20%;
     position: relative;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
 }
 
 .Main{
@@ -21,7 +26,7 @@ body{
     grid-template-columns: auto auto;
     grid-template-rows: 60px auto;
     justify-items: center;
-    width: 75%;
+    width: 80%;
     
 }
 
@@ -29,7 +34,7 @@ body{
 .Header{
     width: 100%;
     height: 60px;
-    background-color: #0b2888;
+    background-color: #1e3b99;
     grid-column: 1 / span 2;
 }
 
@@ -45,15 +50,18 @@ body{
     font-size: 24px;
     display: flex;
     padding: 1rem;
+    /* margin: 1.5rem;
+    border-radius: 12px; */
     justify-content: center;
     color: white;
-    height: 250px;
+    height: 175px;
     align-items: center;
     /* font-family: 'Open Sans', sans-serif; */
     /* font-family: 'Ubuntu', sans-serif; */
 
-
-    background-color: #0b2888;
+    background-color: #1e3b99;
+    /* box-shadow: 0px 0px 12px 5px black; */
+    /* background-color: #945CED; */
     /* background-image: url("./images/night-sky.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -87,14 +95,14 @@ body{
     height: 100%;
     border-radius: 8px;
     color: white;
-    background-color: #0b2888;
+    background-color: #1e3b99;
     font-weight: bold;
     cursor: pointer;
 }
 
 .AddTodo .btn button:hover{
-    filter:brightness(1.1);
-    background-color: lightskyblue;
+    background-color: #455BD5;
+    color: black;
     transition: all 300ms ease;
 }
 
@@ -129,11 +137,16 @@ body{
     width: 550px;
 }
 
+.AddTodo form h3{
+    text-align: center;
+}
+
 .AddTodo form .text input{
     padding: 1rem;
     width: 100%;
     box-sizing: border-box;
     font-size: 1rem;
+    border-radius: 8px;
 }
 
 .AddTodo form .text input:focus {
@@ -170,12 +183,18 @@ body{
 .AddTodo form .confirm button{
     width: 100%;
     height: 45px;
-    background-color: #0b2888;
+    background-color: #1e3b99;
     color: white;
     font-size: 1rem;
     cursor: pointer;
     border: none;
     border-radius: 8px;
+}
+
+.AddTodo form .confirm button:hover{
+    background-color: #455BD5;
+    color: black;
+    transition: all 300ms ease;
 }
 
 /* To-do Calendar from TodoCalendar.js */
@@ -198,15 +217,29 @@ body{
 }
 
 .TodoCalendar .items .item{
-    padding: 0.5rem;
+    font-size: 1.1rem;
+    padding: 1.25rem;
     cursor: pointer;
+    margin-top: 1vh;
+    vertical-align: middle;
+    border-radius: 12px;
 }
 
 .TodoCalendar .items .item:hover{
-    background-color: black;
+    /* background-color: #1e3b99; */
+    background-color: #1e3b99;
     color: white;
-    border-radius: 6px;
+    border-radius: 12px;
     transition: 0.3s;
+}
+
+.TodoCalendar .items .item-clicked{
+    background-color: red;
+    padding: 0.5rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: white;
 }
 
 /* To-do Folders from TodoFolders.js */
@@ -320,7 +353,7 @@ body{
 
 .FolderForm button.confirm{
     right: 0;
-    background-color: #0b2888;
+    background-color: #1e3b99;
     color: white;
 }
 
@@ -344,6 +377,7 @@ body{
     padding-bottom: 10px;
     border-bottom: 1px solid black;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .ListOfTodo .todos {
@@ -352,6 +386,7 @@ body{
 
 .ListOfTodo .todos .todoList{
     background-color: white;
+    border: 1px solid black;
     margin: 10px;
     padding: 5px;
     height: auto;
@@ -426,6 +461,7 @@ body{
 
 .Next7Days .next7DaysList{
     background-color: white;
+    border: 1px solid black;
     margin: 10px;
     padding: 5px;
     height: auto;
@@ -448,7 +484,7 @@ body{
 }
 
 .Next7Days .next7DaysList .day{
-    background-color: #0b2888;
+    background-color: #1e3b99;
     color: white;
     padding: 0.8rem;
     border-radius: 8px;
