@@ -8,7 +8,7 @@ function Todo({todo}){
 
     const[hover, setHover] = useState(false)
 
-    const { selectedTodo, setSelectedTodo } = useContext(TodoContext)
+    const { selectedTodo, setSelectedTodo, setShowEditModal } = useContext(TodoContext)
 
     const deleteButton = todo => {
         deleteTodo(todo)
@@ -78,7 +78,7 @@ function Todo({todo}){
 
                 </div>
 
-                <div className="edit-todo" onClick = { () => setSelectedTodo(todo)}>
+                <div className="edit-todo" onClick = { () => { setSelectedTodo(todo); setShowEditModal(true) }}>
                     {
                         (hover) &&
                         <span>

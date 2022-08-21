@@ -6,6 +6,7 @@ import DateFnsUtils from '@date-io/date-fns';
 import { TodoContext } from '../../context';
 import moment from 'moment';
 import firebase from '../../firebase'
+import Modal from '../Modal';
 
 
 function EditTodo(){
@@ -15,7 +16,7 @@ function EditTodo(){
     const [text, setText] = useState('')
 
 
-    const { selectedTodo } = useContext(TodoContext)
+    const { selectedTodo, showEditModal, setShowEditModal } = useContext(TodoContext)
 
     useEffect(() => {
         if(selectedTodo){
@@ -44,7 +45,8 @@ function EditTodo(){
     return(
         <div className="EditTodo">
             {
-                selectedTodo &&
+                selectedTodo && showEditModal &&
+                <Modal showModal={showEditModal} setShowModal={setShowEditModal}>
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                         <form className="EditTodoForm">
                             <div className="text">
@@ -80,14 +82,15 @@ function EditTodo(){
 
                             {/* <div className="cancel">
                                 <X size='35'/>
-                            </div>
-
-                            <div className="confirm">
-                                <button>Add New Todo!</button>
                             </div> */}
+
+                            <div className="confirm" onClick={() => setShowEditModal(false)}>
+                                <span>Done</span>
+                            </div>
                         
                         </form>
                     </MuiPickersUtilsProvider>
+                </Modal>
                 }
         </div>
     )

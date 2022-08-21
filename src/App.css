@@ -24,7 +24,7 @@ body{
 .Main{
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 60px auto auto;
+    grid-template-rows: 60px auto;
     justify-items: center;
     width: 80%;
     
@@ -48,7 +48,19 @@ body{
 /* VisualCalendar.js */
 
 .VisualCalendar{
-    grid-column: 1 / span 2
+    padding: 2rem;
+    /* margin: 0rem; */
+    width: 25vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.VisualCalendar p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem;
 }
 
 /* DateAndTime.js */
@@ -144,7 +156,13 @@ body{
 }
 
 .AddTodo form h3{
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .AddTodo form .text input{
@@ -471,27 +489,9 @@ body{
 
 /* EditTodo side bar on the main component from EditTodo.js*/
 
-.EditTodo .EditTodoForm{
-    /* background-color: #E1E1E1;
-    width: 25vw;
-    height: 60vh;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    border-radius: 8px;
-    margin: 2rem;
-    overflow-y: auto; /*Gives scrolls bars when the list goes on and on after exceeding the space limit */
-    /* border: 1px solid black; */
-
-    background-color: #E1E1E1;
-    width: 25vw;
-    height: 60vh;
+.EditTodo form{
     padding: 1rem;
-    border-radius: 8px;
-    margin: 2rem;
-    overflow-y: auto; /*Gives scrolls bars when the list goes on and on after exceeding the space limit */
-    border: 1px solid black;
-    position: relative;
+    width: 550px;
 }
 
 .EditTodo .EditTodoForm .text .title{
@@ -509,17 +509,40 @@ body{
 }
 
 .EditTodo .text input{
-    padding: 0.4rem;
+    padding: 1rem;
     width: 100%;
     box-sizing: border-box;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border-radius: 8px;
-    border: 1px solid black;
     
 }
 
 .EditTodo .EditTodoForm .text, .EditTodo .EditTodoForm .pick-day, .EditTodo .EditTodoForm .pick-time{
-    margin-bottom: 35px;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.EditTodo .EditTodoForm .confirm{
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.EditTodo .EditTodoForm .confirm{
+    width: 100%;
+    height: 45px;
+    background-color: #1e3b99;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+}
+
+.EditTodo .EditTodoForm .confirm:hover{
+    background-color: #455BD5;
+    color: black;
+    transition: all 300ms ease;
 }
 
 /*Next 7 Day Component*/
@@ -565,6 +588,8 @@ body{
     border: 1px solid #a0a096;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.125em;
+    
+    height: 300px;
   }
   .react-calendar--doubleView {
     width: 700px;

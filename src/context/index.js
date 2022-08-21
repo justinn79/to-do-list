@@ -13,7 +13,9 @@ function TodoContextProvider({children}){
 
     const [selectedTodo, setSelectedTodo] = useState(undefined)
 
-    const [showCalendar, setShowCalendar] = useState(true)
+    const [showEditModal, setShowEditModal] = useState(false)
+
+    // const [showCalendar, setShowCalendar] = useState(true)
 
     // //highlight what is clicked on the to-do calendar
     // const [clicked, setClicked] = useState(false)
@@ -30,8 +32,11 @@ function TodoContextProvider({children}){
                     selectedTodo,
                     setSelectedTodo,
 
-                    showCalendar,
-                    setShowCalendar
+                    showEditModal,
+                    setShowEditModal
+
+                    // showCalendar,
+                    // setShowCalendar
                 }
             }
         >  

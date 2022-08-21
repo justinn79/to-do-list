@@ -23,8 +23,8 @@ function App() {
 
         <Main>
           <Header />
-          {/* <VisualCalendar /> */}
           <ListOfTodo />
+          <VisualCalendar />
           <EditTodo />
         </Main>
       </div>
