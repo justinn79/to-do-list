@@ -13,6 +13,9 @@ function TodoContextProvider({children}){
 
     const [selectedTodo, setSelectedTodo] = useState(undefined)
 
+    // //highlight what is clicked on the to-do calendar
+    // const [clicked, setClicked] = useState(false)
+
     return(
         <TodoContext.Provider
             value={

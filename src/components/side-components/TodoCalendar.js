@@ -9,7 +9,9 @@ function TodoCalendar(){
     const { setSelectedFolder } = useContext(TodoContext)
     const { setSelectedTodo } = useContext(TodoContext)
 
-    const [clicked, setClicked] = useState(false)
+    const { selectedFolder} = useContext(TodoContext)
+
+    // const [clicked, setClicked] = useState(false)
 
     return(
         <div className="TodoCalendar">
@@ -21,11 +23,13 @@ function TodoCalendar(){
                 {
                     todoCalendaritems.map( item => 
                         <div 
-                            className="item"
                             key={item}
-                            onClick={ () => {setSelectedFolder(item); setSelectedTodo(undefined)}}    
+                            onClick={ () => {setSelectedFolder(item); setSelectedTodo(undefined); }}
+                            className={item === selectedFolder ? "highlighted" : "item"}
                         >
-                            { item.charAt(0).toUpperCase() + item.slice(1) }
+                            {
+                                item.charAt(0).toUpperCase() + item.slice(1)
+                            }
                         </div>
                     )
                 }

@@ -12,7 +12,9 @@ function ListOfTodo(){
         <div className="ListOfTodo">
 
             <div className="selected-Folder">
-                {selectedFolder}
+                <div className="selected-Folder-Text">
+                    {selectedFolder}
+                </div>
             </div>
             
 
@@ -21,11 +23,13 @@ function ListOfTodo(){
                     selectedFolder === "next 7 days" ?
                     <Next7Days todos={todos} />
                     :
+                    
                     todos.map( todo => 
                         <div className="todoList">
                         <Todo todo={todo} key={todo.id} />
                         </div>
-                    )}
+                        )
+                }
             </div>
 
 

@@ -23,7 +23,7 @@ body{
 
 .Main{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 60px auto;
     justify-items: center;
     width: 80%;
@@ -242,6 +242,18 @@ body{
     color: white;
 }
 
+.TodoCalendar .items .highlighted{
+    background-color: #041e75;
+    color: white;
+    font-size: 1.1rem;
+    padding: 1.25rem;
+    cursor: pointer;
+    margin-top: 1vh;
+    vertical-align: middle;
+    border-radius: 12px;
+    
+}
+
 /* To-do Folders from TodoFolders.js */
 
 .TodoFolders{
@@ -367,10 +379,15 @@ body{
     border-radius: 8px;
     margin: 2rem;
     overflow-y: auto; /*Gives scrolls bars when the list goes on and on after exceeding the space limit */
+    border: 1px solid black;
     
 }
 
 .ListOfTodo .selected-Folder{
+    
+}
+
+.ListOfTodo .selected-Folder .selected-Folder-Text{
     margin-bottom: 25px;
     text-transform: capitalize;
     font-weight: bold;
@@ -392,6 +409,7 @@ body{
     height: auto;
     border-radius: 8px;
     word-wrap: break-word;
+    box-shadow: 5px 6px 10px;
     
 }
 
@@ -448,6 +466,7 @@ body{
     border-radius: 8px;
     margin: 2rem;
     overflow-y: auto; /*Gives scrolls bars when the list goes on and on after exceeding the space limit */
+    border: 1px solid black;
 }
 
 .EditTodo .text input{
@@ -466,6 +485,7 @@ body{
     padding: 5px;
     height: auto;
     border-radius: 8px;
+    box-shadow: 5px 6px 10px;
 }
 
 .Next7Days .day{
