@@ -459,6 +459,17 @@ body{
 /* EditTodo side bar on the main component from EditTodo.js*/
 
 .EditTodo .EditTodoForm{
+    /* background-color: #E1E1E1;
+    width: 25vw;
+    height: 60vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 8px;
+    margin: 2rem;
+    overflow-y: auto; /*Gives scrolls bars when the list goes on and on after exceeding the space limit */
+    /* border: 1px solid black; */
+
     background-color: #E1E1E1;
     width: 25vw;
     height: 60vh;
@@ -469,11 +480,28 @@ body{
     border: 1px solid black;
 }
 
+.EditTodo .EditTodoForm .text .title{
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 .EditTodo .text input{
     padding: 0.4rem;
     width: 100%;
     box-sizing: border-box;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid black;
+    
+}
+
+.EditTodo .EditTodoForm .text, .pick-day, .pick-time{
+    margin-bottom: 35px;
 }
 
 /*Next 7 Day Component*/

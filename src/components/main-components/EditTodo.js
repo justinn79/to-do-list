@@ -48,7 +48,7 @@ function EditTodo(){
                     <MuiPickersUtilsProvider utils={DateFnsUtils}>
                         <form className="EditTodoForm">
                             <div className="text">
-                                <h3>Edit a To-do Task</h3>
+                                <div className="title">Edit a To-do Task</div>
                                 <input
                                     type="text"
                                     value={text}
