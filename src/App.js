@@ -8,6 +8,7 @@ import EditTodo from './components/main-components/EditTodo';
 import DateAndTime from './components/side-components/DateAndTime';
 import TodoCalendar from './components/side-components/TodoCalendar';
 import Header from './components/header-component/Header'
+import VisualCalendar from './components/side-components/VisualCalendar';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
 
         <Main>
           <Header />
+          {/* <VisualCalendar /> */}
           <ListOfTodo />
           <EditTodo />
         </Main>

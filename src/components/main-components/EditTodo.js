@@ -6,7 +6,6 @@ import DateFnsUtils from '@date-io/date-fns';
 import { TodoContext } from '../../context';
 import moment from 'moment';
 import firebase from '../../firebase'
-import Calendar from 'react-calendar'
 
 
 function EditTodo(){
@@ -16,7 +15,7 @@ function EditTodo(){
     const [text, setText] = useState('')
 
 
-    const { selectedTodo, showCalendar } = useContext(TodoContext)
+    const { selectedTodo } = useContext(TodoContext)
 
     useEffect(() => {
         if(selectedTodo){
@@ -89,12 +88,6 @@ function EditTodo(){
                         
                         </form>
                     </MuiPickersUtilsProvider>
-                }
-                {
-                    showCalendar && selectedTodo === undefined &&
-                    <div className="Calendar">
-                        <Calendar />
-                    </div>
                 }
         </div>
     )

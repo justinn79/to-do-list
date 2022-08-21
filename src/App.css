@@ -24,7 +24,7 @@ body{
 .Main{
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 60px auto;
+    grid-template-rows: 60px auto auto;
     justify-items: center;
     width: 80%;
     
@@ -43,6 +43,12 @@ body{
     text-align: center;
     letter-spacing: 3px;
 
+}
+
+/* VisualCalendar.js */
+
+.VisualCalendar{
+    grid-column: 1 / span 2
 }
 
 /* DateAndTime.js */
@@ -79,7 +85,7 @@ body{
 
 /* Addtodo.js */
 .AddTodo{
-    margin-top: 1vh;
+    /* margin-top: 1vh; */
     width: 100%;
 }
 
@@ -200,10 +206,9 @@ body{
 /* To-do Calendar from TodoCalendar.js */
 
 .TodoCalendar{
-    margin-top: 2vh;
+    margin-top: 1vh;
     padding:  1rem;
     border-bottom: 1px solid black;
-    border-top: 1px solid black;
     text-align: center;
 }
 
@@ -217,10 +222,10 @@ body{
 }
 
 .TodoCalendar .items .item{
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 1.25rem;
     cursor: pointer;
-    margin-top: 1vh;
+    margin-top: 0.5vh;
     vertical-align: middle;
     border-radius: 12px;
 }
@@ -233,22 +238,22 @@ body{
     transition: 0.3s;
 }
 
-.TodoCalendar .items .item-clicked{
+/* .TodoCalendar .items .item-clicked{
     background-color: red;
     padding: 0.5rem;
     margin-top: 5px;
     margin-bottom: 5px;
     cursor: pointer;
     color: white;
-}
+} */
 
 .TodoCalendar .items .highlighted{
     background-color: #041e75;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 1.25rem;
     cursor: pointer;
-    margin-top: 1vh;
+    margin-top: 0.5vh;
     vertical-align: middle;
     border-radius: 12px;
     
@@ -426,6 +431,14 @@ body{
 
 .Todo .todoContainer span{
     cursor: pointer;
+}
+
+.Todo .todoContainer .delete-todo{
+    
+}
+
+.Todo .todoContainer .delete-todo:hover{
+    
 }
 
 .Todo .todoContainer .text{
