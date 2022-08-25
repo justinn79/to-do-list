@@ -87,11 +87,15 @@ body{
     
 }
 
-.DateAndTime .text .date{
+/* .DateAndTime .text .date{
     text-align: center;
 }
 
 .DateAndTime .text .time{
+    text-align: center;
+} */
+
+.DateAndTime .text{
     text-align: center;
 }
 
