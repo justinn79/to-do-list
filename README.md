@@ -6,6 +6,10 @@ This application is built using:\
 React: Frontend framework for the UI\
 Firebase: To store the todos
 
+# Screenshots
+
+<img alt="Next 7 days filter" src="./src/screenshots/first-pic.JPG">
+
 ## Available Scripts
 
 In the project directory, you can run:
