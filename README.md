@@ -9,6 +9,7 @@ Firebase: To store the todos
 # Screenshots
 
 <img alt="Next 7 days filter" src="./src/screenshots/first-pic.JPG">
+<img alt="Add todo task" src="./src/screenshots/third-pic.JPG">
 
 ## Available Scripts
 
