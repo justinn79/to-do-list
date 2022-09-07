@@ -6,6 +6,9 @@ An application where users can add, edit, delete and filter their todos.
 * React - Frontend framework for the UI
 * Firebase - To store the todos
 
+## Live Demo
+<a href="https://to-do-application-justinn79.netlify.app/">Click here for Live Demo</a>
+
 ## Setup:
 ```
 Within the root directory of this project in the terminal:
