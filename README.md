@@ -3,8 +3,8 @@
 An application where users can add, edit, delete and filter their todos.
 
 ## Built with:
-* React: Frontend framework for the UI
-* Firebase: To store the todos
+* React - Frontend framework for the UI
+* Firebase - To store the todos
 
 # Screenshots 📷
 
