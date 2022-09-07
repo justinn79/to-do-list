@@ -8,15 +8,11 @@ An application where users can add, edit, delete and filter their todos.
 
 ## Setup:
 ```
-Within two terminals:
+Within the root directory of this project in the terminal:
 
-cd client - Navigate into the client folder
-npm install - Install the dependencies within the client folder
-npm start - Running the client
+npm install - Install the dependencies within the application
+npm start - Running the application
 
-cd server - Navigate into the server folder
-npm install - Install the dependencies within the server folder
-npm start - Running the server
 ```
 
 # Screenshots 📷
